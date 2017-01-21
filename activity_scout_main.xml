@@ -9,45 +9,87 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="org.strykeforce.scoutingapp.ScoutMainActivity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="QR Code Generator"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:hint="Enter Text to generate"
-        android:id="@+id/text"/>
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:layout_centerHorizontal="true"
         android:text="GENERATE"
-        android:id="@+id/gen_btn"/>
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginTop="155dp"
-        android:background="@android:color/black"
-        android:id="@+id/view" />
+        android:id="@+id/gen_btn"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:id="@+id/image"
-        android:layout_below="@+id/view"
-        android:layout_centerHorizontal="true"
         android:visibility="visible"
-        android:layout_width="500dp"
-        android:layout_height="500dp" />
+        android:layout_width="450dp"
+        android:layout_height="450dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:text="CONTINUE"
         android:id="@+id/ok_button"
-        android:layout_below="@+id/image"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:visibility="visible"
-        android:layout_alignEnd="@+id/image"
+        android:visibility="invisible"
         android:layout_width="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_toEndOf="@+id/image"
         android:layout_height="70dp" />
+
+    <Button
+        android:text="NEXT MATCH"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/nextMatchButton"
+        android:visibility="visible" />
+
+    <TextView
+        android:text="Total Number of Gears Placed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gear_label"
+        android:layout_alignParentTop="true"
+        android:layout_toStartOf="@+id/gen_btn"
+        android:layout_marginEnd="77dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/total_gears"
+        android:layout_below="@+id/gear_label"
+        android:layout_alignStart="@+id/gear_label" />
+
+    <TextView
+        android:text="Match: 1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp"
+        android:id="@+id/matchLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <TextView
+        android:text="Team: "
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/matchLabel"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp"
+        android:id="@+id/teamLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+    <Button
+        android:text="Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/gen_btn"
+        android:layout_marginStart="41dp"
+        android:id="@+id/tempButton" />
+
 </RelativeLayout>
